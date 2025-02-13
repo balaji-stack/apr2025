@@ -1,3 +1,3 @@
-FROM nginx
-COPY . /usr/share/nginx/html
-CMD ["nginx", "-g", "daemon off;"]
+FROM httpd
+COPY . /usr/local/apache2/htdocs/
+CMD ["httpd", "-D", "FOREGROUND"]
